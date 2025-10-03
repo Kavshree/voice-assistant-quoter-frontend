@@ -8,8 +8,16 @@
     : status === 'error' ? 'Error — Retry'
     : 'Mic Permission Denied' }}</span>
     </button>
-    <p *ngIf="status==='permission-denied'" class="warn">
-        Please allow microphone access in your browser (look near the address bar).
-    </p>
+  <div *ngIf="status==='permission-denied'"
+      class="alert alert-error"
+      role="alert" aria-live="assertive">
+    <span class="icon" aria-hidden="true">!</span>
+    <div class="msg">
+      <strong>Microphone blocked.</strong>
+      <div>Please allow microphone access (click the lock icon near the address bar → <em>Site settings</em> → <em>Microphone: Allow</em>) and reload.</div>
+    </div>
+    <button class="retry" (click)="toggle()">Retry</button>
+  </div>
+
  </div>
  <app-voice-indicator *ngIf="status==='live'"></app-voice-indicator>
