@@ -1,0 +1,40 @@
+.creative-button {
+  background: linear-gradient(45deg, #FF6B6B, #556270); /* Gradient background */
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  color: white;
+  padding: 15px 30px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.creative-button:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.creative-button:active {
+  transform: translateY(0); /* Press effect on click */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-icon {
+  font-size: 1.5em; /* Larger icon */
+  line-height: 1; /* Align icon vertically */
+}
+
+.button-text {
+  letter-spacing: 1px;
+}
+
+.warn {
+  color: #c00;
+  font-weight: 600;
+  margin-top: .5rem;
+}

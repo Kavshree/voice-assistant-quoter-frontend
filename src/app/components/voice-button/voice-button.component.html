@@ -1,0 +1,15 @@
+
+
+ <div style="display:grid;place-items:center;min-height:60vh;" *ngIf="status!=='live'">
+    <button class="creative-button" (click)="toggle()">
+    <span class="button-text">
+  {{ status === 'idle' ? 'Start Voice Assistant'
+    : status === 'connecting' ? 'Connecting…'
+    : status === 'error' ? 'Error — Retry'
+    : 'Mic Permission Denied' }}</span>
+    </button>
+    <p *ngIf="status==='permission-denied'" class="warn">
+        Please allow microphone access in your browser (look near the address bar).
+    </p>
+ </div>
+ <app-voice-indicator *ngIf="status==='live'"></app-voice-indicator>

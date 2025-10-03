@@ -1,0 +1,18 @@
+<div class="vi-wrap" >
+  <div class="vi-panel">
+    <div class="vi-bubbles" [class.speaking]="speaking()">
+      <span class="bubble b1"></span>
+      <span class="bubble b2"></span>
+      <span class="bubble b3"></span>
+    </div>
+    <div class="vi-text">
+        <div class="vi-seg" [class.speaking]="speaking()" aria-label="Listening status and stop">
+        <span class="seg-label">{{ speaking() ? 'Hearing you…' : 'Listening…' }}</span>
+        <button class="seg-action" (click)="stop()" aria-label="Stop voice assistant">✕</button>
+        </div>
+    </div>
+
+
+    <div class="vi-hint">Press Esc to stop</div>
+  </div>
+</div>
