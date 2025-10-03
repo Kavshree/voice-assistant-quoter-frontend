@@ -3,13 +3,14 @@ import { Component } from "@angular/core";
 import { Subscription } from "rxjs";
 import { Status, VoiceService } from "../../services/voice.service";
 import { VoiceIndicatorComponent } from "../voice-indicator/voice-indicator.component";
+import { PayloadDebugComponent } from "../payload-debug/payload-debug.component";
 
 
 @Component({
     selector: "app-voice-button",
     templateUrl: "./voice-button.component.html",
     styleUrls: ["./voice-button.component.scss"],
-     imports: [CommonModule, VoiceIndicatorComponent],
+     imports: [CommonModule, VoiceIndicatorComponent,PayloadDebugComponent ],
     standalone: true,
 })
 export class VoiceButtonComponent {
